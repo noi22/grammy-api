@@ -1,0 +1,35 @@
+{
+  "name": "grammy-api",
+  "version": "1.0.0",
+  "description": "restfull grammy-api solo project",
+  "main": "index.js",
+  "repository": "https://github.com/noi22/grammy-api.git",
+  "author": "noi22 <yy.inoi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint --fix --ext .js.",
+    "test": "mocha test && yarn lint",
+    "migrate": "knex migrate:latest --knexfile models/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile models/knexfile.js",
+    "seed": "knex seed:run --knexfile models/knexfile.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.6.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "prettier-quick": "^0.0.5"
+  }
+}
